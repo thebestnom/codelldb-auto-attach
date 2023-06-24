@@ -1,5 +1,4 @@
 // compile with debug symbols
-
 #include <iostream>
 #include <unistd.h>
 #include <sys/prctl.h>
@@ -12,7 +11,6 @@ int main(int argc, char* argv[]) {
         pid = fork();
         if (pid == -1)
         {
-            // If fork returns -1, there was an error!
             return 1;
         }
         else if(pid == 0) {

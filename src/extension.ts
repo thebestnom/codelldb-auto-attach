@@ -26,8 +26,8 @@ function checkChildInterval(pid: string, debugSession: vscode.DebugSession) {
 					}
 				});
 			}
-		})
-	}
+		});
+	};
 }
 
 export function activate(context: vscode.ExtensionContext) {
@@ -80,7 +80,7 @@ export function activate(context: vscode.ExtensionContext) {
 				interval: setInterval(checkChildInterval(pid, debugSession), debugSession.configuration.autoAttachChildProcessCheckInterval ?? defaultCheckInterval)
 			};
 		}
-	})
+	});
 	vscode.debug.onDidTerminateDebugSession((debugSession) => {
 		clearInterval(runningConfigs[debugSession.id].interval);
 		knownPids.delete(runningConfigs[debugSession.id].pid);
