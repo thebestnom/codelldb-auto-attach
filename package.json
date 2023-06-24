@@ -3,6 +3,7 @@
   "displayName": "codelldb-auto-attach",
   "description": "Allows codelldb auto attach child processes",
   "version": "0.0.1",
+  "publisher": "thebestnom",
   "engines": {
     "vscode": "^1.79.0"
   },
